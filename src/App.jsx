@@ -26,7 +26,10 @@ function App() {
   return (
     <Router>
       <div className="App text-center">
-        <Link to="/" className="text-decoration-none text-warning fw-bold mt-4 fs-1">Recipe Finder 🍲</Link>
+        <Link to="/" className="text-decoration-none text-warning fw-bold mt-4 fs-1" onClick={() => {
+          setRecipe([]);
+          setHasSearched(false)
+        }}>Recipe Finder 🍲</Link>
         <Routes>
           <Route path="/" element={
             <>
